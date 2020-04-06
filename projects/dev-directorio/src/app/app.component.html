@@ -1,0 +1,77 @@
+<div class="col-sm-12">
+  <div class="ui-slp-fix-col3 ui-slp-directorio-structure">
+    <div class="col-sm-12 col-md-6 col-lg-3 ui-slp-submenu ui-slp-element_1" *ngFor="let item of directorio">
+      <div *ngIf="item.color == 'Verde'" class="ui-slp-selector_container">
+        <a href="{{item.enlace}}" target="_blank">
+          <img src="/SiteAssets/Recursos/img/verde.png" class="ui-slp-selector_item">
+        </a>
+        <div class="ui-slp-sector_img ui-slp-selector_1">
+          <a href="{{item.enlace}}" target="_blank">
+            <img src="{{item.image}}" class="ui-slp-selector_logo">
+          </a>
+        </div>
+        <div class="ui-slp-direct-titulo">
+          <a href="{{item.enlace}}" target="_blank">{{item.title}}
+          </a>
+        </div>
+      </div>
+      <div *ngIf="item.color == 'Verde Claro'" class="ui-slp-selector_container">
+        <a href="{{item.enlace}}" target="_blank">
+          <img src="/SiteAssets/Recursos/img/verde-claro.png" class="ui-slp-selector_item">
+        </a>
+        <div class="ui-slp-sector_img ui-slp-selector_1">
+          <a href="{{item.enlace}}" target="_blank">
+            <img src="{{item.image}}" class="ui-slp-selector_logo">
+          </a>
+        </div>
+        <div class="ui-slp-direct-titulo">
+          <a href="{{item.enlace}}" target="_blank">{{item.title}}
+          </a>
+        </div>
+      </div>
+      <div *ngIf="item.color == 'Rojo'" class="ui-slp-selector_container">
+        <a href="{{item.enlace}}" target="_blank">
+          <img src="/SiteAssets/Recursos/img/rojo.png" class="ui-slp-selector_item">
+        </a>
+        <div class="ui-slp-sector_img ui-slp-selector_1">
+          <a href="{{item.enlace}}" target="_blank">
+            <img src="{{item.image}}" class="ui-slp-selector_logo">
+          </a>
+        </div>
+        <div class="ui-slp-direct-titulo">
+          <a href="{{item.enlace}}" target="_blank">{{item.title}}
+          </a>
+        </div>
+      </div>
+      <div *ngIf="item.color == 'Naranja'" class="ui-slp-selector_container">
+        <a href="{{item.enlace}}" target="_blank">
+          <img src="/SiteAssets/Recursos/img/naranja.png" class="ui-slp-selector_item">
+        </a>
+        <div class="ui-slp-sector_img ui-slp-selector_1">
+          <a href="{{item.enlace}}" target="_blank">
+            <img src="{{item.image}}" class="ui-slp-selector_logo">
+          </a>
+        </div>
+        <div class="ui-slp-direct-titulo">
+          <a href="{{item.enlace}}" target="_blank">{{item.title}}
+          </a>
+        </div>
+      </div>
+      <div *ngIf="item.color == 'Gris'" class="ui-slp-selector_container">
+        <a href="{{item.enlace}}" target="_blank">
+          <img src="/SiteAssets/Recursos/img/gris.png" class="ui-slp-selector_item">
+        </a>
+        <div class="ui-slp-sector_img ui-slp-selector_1">
+          <a href="{{item.enlace}}" target="_blank">
+            <img src="{{item.image}}" class="ui-slp-selector_logo">
+          </a>
+        </div>
+        <div class="ui-slp-direct-titulo">
+          <a href="{{item.enlace}}" target="_blank">{{item.title}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-slp-spacer_50"></div>
+</div>

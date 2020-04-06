@@ -1,0 +1,41 @@
+<!--<div class="container-fluid">
+	<div class="col-xs-12 ">
+		<div class="ui-slp-VideoPrincipal-structure" *ngFor="let item of video">
+			<div class="col-xs-12 ui-slp-bg_gris_video">
+				<div class="slp-video-princ-content">
+					<iframe id="vid_frame" src="https://www.youtube.com/embed/{{item.idVideo}}?autoplay=0&amp;rel=0"
+						frameborder="0" allowfullscreen="allowfullscreen" style="width: 100%; height: 1067px;">
+					</iframe>
+				</div>
+				<div class="ui-slp-spacer_150">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+      <!--<div *ngIf="video.mostrar != null" onclick="document.getElementById('vidoMain')">
+        <img src="{{video.image}}"  class="img-mainVideo"/>
+      </div>-->
+
+
+<div class="slp-video-princ-content">
+  <div *ngIf="video?.fuente == 'Youtube'" class="yb-main-video">
+    <div *ngIf="video.mostrar == 'Si'">
+        <img src="{{video.image}}"  class="img-mainVideo"/>
+        <i class="material-icons btn-video-icon" (click)="cambiar(video)">play_circle_outline</i>
+    </div>
+    <div>
+        <iframe width="1005" height="545" class="ui-slp-main-video" [src]="video?.urlSafe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div *ngIf="video?.fuente == 'Facebook'" class="fb-main-video" id="vidoMain">
+    <div *ngIf="video.mostrar == 'Si'">
+      <img src="{{video.image}}"  class="img-mainVideo"/>
+      <i class="material-icons btn-video-icon" (click)="cambiar(video)">play_circle_outline</i>
+    </div>
+    <div>
+      <iframe width="1005" height="545" class="ui-slp-main-video" [src]="video?.fbUrl" frameborder="0"></iframe>
+    </div>
+</div>
+</div>

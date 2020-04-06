@@ -1,0 +1,49 @@
+<div class="container-fluid">
+	<div class="row">
+	  <div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-footer ui-pie-pagina">
+					<div class="col-sm-12 ui-content-footer">
+						<div *ngFor="let item of footer" class="col-sm-12 col-md-6 col-lg-3">
+							<div class="ui-title-footer">
+								<span>{{ item.title | uppercase }}</span>
+							</div>
+							<div *ngIf="item.check1" class="ui-options-footer">
+								<a href="{{ item.Enlace1 }}" target="_blank"><span>{{ item.texto1 }}</span></a>
+							</div>
+							<div *ngIf="item.check2" class="ui-options-footer">
+								<a href="{{ item.Enlace2 }}" target="_blank"><span>{{ item.texto2 }}</span></a>
+							</div>
+							<div *ngIf="item.check3" class="ui-options-footer">
+								<a href="{{ item.Enlace3 }}" target="_blank"><span>{{ item.texto3 }}</span></a>
+							</div>
+							<div *ngIf="item.check4" class="ui-options-footer">
+								<a href="{{ item.Enlace4 }}" target="_blank"><span>{{ item.texto4 }}</span></a>
+							</div>
+							<div *ngIf="item.check5" class="ui-options-footer">
+								<a href="{{ item.Enlace5 }}" target="_blank"><span>{{ item.texto5 }}</span></a>
+							</div>
+							<div *ngIf="item.check6" class="ui-options-footer">
+								<a href="{{ item.Enlace6 }}" target="_blank"><span>{{ item.texto6 }}</span></a>
+							</div>
+							<div *ngIf="item.check7" class="ui-options-footer">
+								<a href="{{ item.Enlace7 }}" target="_blank"><span>{{ item.texto7 }}</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 ui-footer-politicas">
+						<div *ngIf="global.opcionPoliticas == 'Enlace'" class="ui-footer-copyrigth">
+							<a href="{{global.rutaPoliticas}}" target="_blank"><span>Aviso de privacidad</span></a>
+						</div>
+						<div *ngIf="global.opcionPoliticas == 'PDF'" class="ui-footer-copyrigth">
+							<a href="{{global.rutaPoliticas}}" target="_blank"><span>Aviso de privacidad</span></a>
+						</div>
+						<div class="ui-footer-copyrigth">
+							<span>{{ global.Derechos }}</span>
+						</div>
+					</div>
+				</div>
+			  </div>
+		</div>
+	</div>
+</div>

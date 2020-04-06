@@ -1,0 +1,31 @@
+
+<div class="col-sm-12 mt2" [ngStyle]="{'position': 'relative'}">
+  <div class="title-seccion">
+    <h2>Trámites y Servicios</h2>
+  </div>
+  <div *ngIf="global?.mostrarTodos" class="view-more">
+    <a href="https://www.google.com/" class="ui-view-all-tramites" target="_blank">
+      <i class="material-icons" aria-hidden="true" [ngStyle]="{'color':'#12963F', 'font-size': '14px'}">add_circle</i>Ver todos
+    </a>
+  </div>
+</div>
+<div class="col-sm-12 ui-slp-TramitesYServicios-principal">
+  <div class="col-lg-1"></div>
+  <div *ngFor="let item of tramites" class="col-lg-2" >
+    <div class="ui-slp-selector_container">
+      <a href="{{item.enlace}}" class="ui-slp-selector_item" target="_blank">
+        <img src="/SiteAssets/Recursos/img/grisclaro.png">
+      </a>
+      <div class="ui-slp-sector_img ui-slp-selector_1">
+        <a href="{{item.enlace}}" target="_blank">
+          <img src="{{item.image}}">
+        </a>
+      </div>
+      <div class="ui-slp-sector_title_tramserv">
+        <a href="{{item.enlace}}" target="_blank">{{item.title}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

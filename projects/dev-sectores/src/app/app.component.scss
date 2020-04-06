@@ -1,0 +1,131 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+// Generales
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.position-initial {
+  position: initial;
+}
+.right-0 {
+  right: 0 !important;
+}
+.left-0 {
+  left: 0 !important;
+}
+.bottom-0 {
+  bottom: 0 !important;
+}
+.top-initial {
+  top: initial !important;
+}
+.dropdown-menu {
+  border: none !important;
+  width: 100%;
+}
+.pcustom {
+padding: 50px 0;
+display: inline-flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+// CSS Custom
+.container-item {
+  height: 212px;
+  transition: all 0.5s ease-in 0s;
+  margin: 50px 27.5px !important;
+  width: 189px;
+}
+.btn-item {
+  height: 100%;
+  padding: 0 !important;
+  width: 100%;
+  background-size: contain;
+}
+.btn-item-img {
+  height: 80px;
+  margin: auto;
+  overflow: hidden;
+  width: 69px;
+}
+.btn-item-img img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.btn-item-title h6 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color:#fff;
+}
+.btn-legend {
+  display:none;
+
+}
+.btn-group.open .btn-legend {
+  display: block;
+  position: absolute;
+  background: #d88d9e;
+  padding: 3px;
+  color: #fff;
+  font-size: 12px;
+  line-height: initial;
+  bottom: 0;
+}
+.title-seccion h2 {
+  color: #333;
+  font-size: 36px;
+  font-weight: bold;
+}
+.title-seccion h2:after {
+  border: 2px solid #b3112a;
+  content: '';
+  display: block;
+  width: 65px;
+}
+
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.type-action-btn {
+  height: 100%;
+  width: 100%;
+}
+
+.dropdown-menu:after {
+  background: none !important;
+}

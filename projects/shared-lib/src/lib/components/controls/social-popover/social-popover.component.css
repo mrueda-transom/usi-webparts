@@ -1,0 +1,56 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.share-popover{
+  background: none !important;
+  border: none;
+  padding: 0px;
+  color: #009a3e;
+  font-size: 14px;
+  font-family: Montserrat-Medium;
+  cursor: pointer;
+}
+
+.container-share {
+  background: white;
+  border: round(2);
+}
+
+.share-popover:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.fa {
+  margin: 0px!important;
+}
+
+.fa-facebook-f {
+  color: #3b5998!important;
+}
+
+.fa-google {
+  color: #c23321!important;
+}
+
+.fa-twitter {
+  color: #00aced!important;
+  background-color: white!important;
+}
+
+.fa-whatsapp {
+  color: #29a628!important;
+}
+
+.fa-at {
+  color: #3490F3!important;
+}
+
+.fa-linkedin {
+  color: #007bb6!important;
+}
+
+.fa-instagram {
+  color: #c13584!important;
+}

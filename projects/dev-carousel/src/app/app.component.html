@@ -1,0 +1,51 @@
+<div class="col-sm-12 mt2" [ngStyle]="{'position': 'relative', 'background-color': '#e6e6e6'}">
+  <div class="title-seccion">
+    <h2>Noticias</h2>
+  </div>
+  <div *ngIf="global?.mostrarTodos" class="view-more">
+    <a href="/SitePages/Web%20Parts/NoticiasTodas.aspx" class="ui-view-all" target="_blank">
+      <i class="material-icons" aria-hidden="true" [ngStyle]="{'color': '#12963F', 'font-size': '15px'}">add_circle</i>Todas las noticias
+    </a>
+  </div>
+</div>
+<ngx-slick-carousel class="carousel" [config]="slideConfig">
+  <div class="slide" ngxSlickItem *ngFor="let item of news">
+    <div class="ui-container-new">
+      <div class="ui-image-new">
+        <img src="{{ item.image }}"/>
+      </div>
+      <div class="content-new">
+        <div class="ui-title-new">
+          <p>{{item.title}}</p>
+        </div>
+        <div class="ui-date-new">
+          <i class="material-icons icon-new">date_range</i>
+          <p>{{ item.created | date: "mediumDate" }}</p>
+        </div>
+        <div class="ui-description-new">
+          <p>{{ item.description }}</p>
+        </div>
+        <div class="ui-links-new">
+          <div class="ui-read-new">
+            <i class="material-icons icon-new">add_circle</i>
+            <a href="{{'/SitePages/Web%20Parts/Contenido%20Noticias.aspx/' + item.id}}">     Leer Nota</a>
+          </div>
+          <div class="ui-share-new">
+            <div class="ui-share-icon">
+              <i class="material-icons icon-new icon-share">share</i>
+            </div>
+            <div class="ui-share-link">
+              <shared-social-popover
+                url="{{'/SitePages/Web%20Parts/Contenido%20Noticias.aspx/' + item.id}}"
+                mensajeAsunto="{{ item.title }}"
+                mensajeContenido="{{ item.title }}:"
+                twitterText="{{ item.title }}:"
+              ></shared-social-popover>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>
+

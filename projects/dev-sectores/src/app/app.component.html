@@ -1,0 +1,317 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 pcustom">
+      <div class="d-flex justify-content-center align-content-between flex-wrap text-center" *ngFor="let sector of sectorFilter(sectores)">
+        <div *ngIf="sector.color == 'Rojo'" class="btn-group position-initial" dropdown>
+          <div  *ngIf="sector.shape == 'Hexagonal'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-1" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/rojo.png) no-repeat'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/rojo.png) no-repeat', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div  *ngIf="sector.shape == 'Cuadrado'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-1" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/rojo_d.png) no-repeat', 'background-size': 'contain'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/rojo_d.png) no-repeat', 'background-size': 'contain', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div id="dropdown-animated-1" *dropdownMenu class="position-absolute dropdown-menu"
+              role="menu" aria-labelledby="button-animated">
+              <div class="container pcustom-container">
+                <div class="row mt-md-3">
+                  <div class="col">
+                    <div class="title-seccion">
+                      <h2>{{ sector.titleContent }}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div [innerHTML]="sector.content"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div *ngIf="sector.color == 'Naranja'" class="btn-group position-initial" dropdown>
+          <div  *ngIf="sector.shape == 'Hexagonal'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-2" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/naranja.png) no-repeat'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/naranja.png) no-repeat', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div  *ngIf="sector.shape == 'Cuadrado'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-2" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/naranja_d.png) no-repeat', 'background-size': 'contain'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/naranja_d.png) no-repeat', 'background-size': 'contain', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div id="dropdown-animated-2" *dropdownMenu class="position-absolute dropdown-menu"
+              role="menu" aria-labelledby="button-animated">
+              <div class="container pcustom-container">
+                <div class="row row mt-md-3">
+                  <div class="col">
+                    <div class="title-seccion">
+                      <h2>{{ sector.titleContent }}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div [innerHTML]="sector.content"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div *ngIf="sector.color == 'Verde'" class="btn-group position-initial" dropdown>
+          <div  *ngIf="sector.shape == 'Hexagonal'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-3" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/verde.png) no-repeat'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/verde.png) no-repeat', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div  *ngIf="sector.shape == 'Cuadrado'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-3" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/verde_d.png) no-repeat', 'background-size': 'contain'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/verde_d.png) no-repeat', 'background-size': 'contain', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div id="dropdown-animated-3" *dropdownMenu class="position-absolute dropdown-menu"
+              role="menu" aria-labelledby="button-animated">
+              <div class="container pcustom-container">
+                <div class="row row mt-md-3">
+                  <div class="col">
+                    <div class="title-seccion">
+                      <h2>{{ sector.titleContent }}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div [innerHTML]="sector.content"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div *ngIf="sector.color == 'Gris'" class="btn-group position-initial" dropdown>
+          <div  *ngIf="sector.shape == 'Hexagonal'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-4" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/gris.png) no-repeat'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/gris.png) no-repeat', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div  *ngIf="sector.shape == 'Cuadrado'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-4" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/gris_d.png) no-repeat', 'background-size': 'contain'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/gris_d.png) no-repeat', 'background-size': 'contain', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div id="dropdown-animated-4" *dropdownMenu class="position-absolute dropdown-menu"
+              role="menu" aria-labelledby="button-animated">
+              <div class="container pcustom-container">
+                <div class="row row mt-md-3">
+                  <div class="col">
+                    <div class="title-seccion">
+                      <h2>{{ sector.titleContent }}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div [innerHTML]="sector.content"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div *ngIf="sector.color == 'Verde Claro'" class="btn-group position-initial" dropdown>
+          <div  *ngIf="sector.shape == 'Hexagonal'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-5" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/verde-claro.png) no-repeat'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/verde-claro.png) no-repeat', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div  *ngIf="sector.shape == 'Cuadrado'" class="container-item hvr-pulse">
+            <div *ngIf="sector.action == 'Contenido'" class="type-action-btn">
+              <a id="button-animated-5" dropdownToggle type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center"
+                    aria-controls="dropdown-animated" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/verde_claro_d.png) no-repeat', 'background-size': 'contain'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+            <div *ngIf="sector.action == 'Enlace'" class="type-action-btn">
+              <a  href="{{sector.enlace}}" target="_blank" type="button" class="btn-item d-flex animate pulse align-items-center justify-content-center" [ngStyle]="{'background':'url(/SiteAssets/Recursos/img/verde_claro_d.png) no-repeat', 'background-size': 'contain', 'text-decoration': 'none'}">
+              <div class="content-item">
+                <div class="btn-item-img"><img src="{{sector.image}}" alt=""></div>
+                <div class="btn-item-title mt-1"><h6>{{sector.title}}</h6></div>
+              </div>
+              <span class="btn-legend">La información de abajo a cambiado</span>
+            </a>
+            </div>
+          </div>
+          <div id="dropdown-animated-5" *dropdownMenu class="position-absolute dropdown-menu"
+              role="menu" aria-labelledby="button-animated">
+              <div class="container pcustom-container">
+                <div class="row row mt-md-3">
+                  <div class="col">
+                    <div class="title-seccion">
+                      <h2>{{ sector.titleContent }}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div [innerHTML]="sector.content"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
